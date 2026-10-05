@@ -10,7 +10,8 @@
     "android:open": "npx cap open android",
     "android:debug": "npm run android:sync && cd android && ./gradlew assembleDebug",
     "android:bundle": "npm run android:sync && cd android && ./gradlew bundleRelease",
-    "audit:release": "node scripts/audit-release.mjs"
+    "audit:release": "node scripts/audit-release.mjs",
+    "audit:qaloon": "node scripts/audit-qaloon-d4.mjs"
   },
   "devDependencies": {
     "@capacitor/android": "^7.4.0",

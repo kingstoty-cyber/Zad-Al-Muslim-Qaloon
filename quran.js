@@ -10,7 +10,8 @@
         last: 'zad_quran_last_read',
         bookmarks: 'zad_quran_bookmarks',
         completed: 'quran_v3',
-        fontSize: 'zad_quran_font_size'
+        fontSize: 'zad_quran_font_size',
+        mode: 'zad_quran_reading_mode'
     };
     let quranData = null;
     let chapters = null;
@@ -65,47 +66,118 @@
         }
     }
 
+    function quranMode() { return localStorage.getItem(KEYS.mode) === 'qaloon' ? 'qaloon' : 'uthmani'; }
+
+    function setQuranMode(mode) {
+        localStorage.setItem(KEYS.mode, mode === 'qaloon' ? 'qaloon' : 'uthmani');
+        renderQuranHome();
+    }
+
+    function modeSwitch(mode) {
+        return `<div class="quran-mode-switch" role="tablist" aria-label="اختيار المصحف">
+            <button type="button" role="tab" aria-selected="${mode==='uthmani'}" class="${mode==='uthmani'?'active':''}" onclick="setQuranMode('uthmani')"><i class="fas fa-book-open"></i><span><strong>النص العثماني</strong><small>القراءة النصية الحالية</small></span></button>
+            <button type="button" role="tab" aria-selected="${mode==='qaloon'}" class="${mode==='qaloon'?'active':''}" onclick="setQuranMode('qaloon')"><i class="fas fa-book-quran"></i><span><strong>مصحف ليبيا — قالون</strong><small>تلاوة قالون وبياناته المستقلة</small></span></button>
+        </div>`;
+    }
+
     function renderQuranHome(filter = '') {
         currentSurah = null;
         const content = document.getElementById('page-content');
+        const mode = quranMode();
         const last = readJson(KEYS.last, null);
         const completed = readJson(KEYS.completed, []);
         const bookmarks = readJson(KEYS.bookmarks, []);
         const query = normalizeArabic(filter);
         const visible = chapters.filter(ch => !query || normalizeArabic(ch.name).includes(query) || String(ch.id) === query);
         const percent = Math.round((completed.length / 114) * 100);
+        const qaloonState = window.ZadQaloon?.state?.() || {surah:1,ayah:1,page:1};
 
         content.innerHTML = `
             <section class="quran-hero">
                 <div class="quran-hero-icon"><i class="fas fa-book-quran"></i></div>
-                <div><h2>القرآن الكريم</h2><p>نص كامل بالرسم العثماني — 114 سورة</p></div>
+                <div><h2>القرآن الكريم</h2><p>اختر طريقة القراءة ثم السورة</p></div>
             </section>
-            ${last ? `<button class="quran-continue" onclick="openSurah(${last.surah}, ${last.ayah || 1})">
+            ${modeSwitch(mode)}
+            ${mode==='uthmani' && last ? `<button class="quran-continue" onclick="openSurah(${last.surah}, ${last.ayah || 1})">
                 <i class="fas fa-book-open"></i><span><small>متابعة القراءة</small><strong>سورة ${escapeHtml(chapters[last.surah - 1].name)} — الآية ${last.ayah || 1}</strong></span><i class="fas fa-chevron-left"></i>
             </button>` : ''}
-            <div class="quran-stats">
-                <div><strong>${completed.length}</strong><span>سورة مكتملة</span></div>
-                <div><strong>${percent}%</strong><span>نسبة الختمة</span></div>
-                <div><strong>${bookmarks.length}</strong><span>علامة محفوظة</span></div>
-            </div>
-            <div class="progress-bar quran-progress"><div class="progress-fill" style="width:${percent}%"></div></div>
+            ${mode==='qaloon' ? `<button class="quran-continue qaloon-continue" onclick="openQaloonSurah(${qaloonState.surah||1}, ${qaloonState.ayah||1})">
+                <i class="fas fa-book-quran"></i><span><small>متابعة قالون</small><strong>سورة ${escapeHtml(chapters[(qaloonState.surah||1)-1]?.name||'الفاتحة')} — الآية ${qaloonState.ayah||1}</strong></span><i class="fas fa-chevron-left"></i>
+            </button>` : ''}
+            ${mode==='uthmani' ? `<div class="quran-stats"><div><strong>${completed.length}</strong><span>سورة مكتملة</span></div><div><strong>${percent}%</strong><span>نسبة الختمة</span></div><div><strong>${bookmarks.length}</strong><span>علامة محفوظة</span></div></div><div class="progress-bar quran-progress"><div class="progress-fill" style="width:${percent}%"></div></div>` : `<div class="qaloon-safety-note"><i class="fas fa-shield-halved"></i><span>قالون مستقل عن ترقيم النص العثماني. لن نستخدم نص 6236 لتحديد آيات قالون 6214.</span></div>`}
             <div class="quran-tools">
                 <label class="quran-search"><i class="fas fa-magnifying-glass"></i><input id="surah-search" type="search" placeholder="ابحث باسم السورة أو رقمها" value="${escapeHtml(filter)}" oninput="filterSurahs(this.value)"></label>
-                <button onclick="showQuranBookmarks()" title="العلامات"><i class="fas fa-bookmark"></i></button>
-                <button onclick="showQuranTextSearch()" title="البحث في الآيات"><i class="fas fa-align-right"></i></button>
+                ${mode==='uthmani'?`<button onclick="showQuranBookmarks()" title="العلامات"><i class="fas fa-bookmark"></i></button><button onclick="showQuranTextSearch()" title="البحث في الآيات"><i class="fas fa-align-right"></i></button>`:''}
             </div>
-            <div class="surah-list">
-                ${visible.map(ch => {
-                    const done = completed.includes(ch.id);
-                    return `<article class="surah-row" onclick="openSurah(${ch.id},1)">
-                        <span class="surah-number">${ch.id}</span>
-                        <span class="surah-title"><strong>سورة ${escapeHtml(ch.name)}</strong><small>${ch.type === 'meccan' ? 'مكية' : 'مدنية'} • ${ch.total_verses} آية</small></span>
-                        <button class="surah-complete ${done ? 'done' : ''}" onclick="event.stopPropagation();toggleSurahComplete(${ch.id})" aria-label="${done ? 'إلغاء إتمام السورة' : 'تعليم السورة كمكتملة'}"><i class="fas fa-check"></i></button>
-                        <i class="fas fa-chevron-left surah-arrow"></i>
-                    </article>`;
-                }).join('') || '<div class="quran-empty">لا توجد سورة مطابقة.</div>'}
+            <div class="surah-list quran-index-list">
+                ${visible.map(ch => mode==='qaloon' ? `<button class="surah-row qaloon-surah-row" onclick="openQaloonSurah(${ch.id},1)"><span class="surah-number">${ch.id}</span><span class="surah-title"><strong>سورة ${escapeHtml(ch.name)}</strong><small>مصحف ليبيا • رواية قالون</small></span><i class="fas fa-chevron-left surah-arrow"></i></button>` : (()=>{const done=completed.includes(ch.id);return `<article class="surah-row" onclick="openSurah(${ch.id},1)"><span class="surah-number">${ch.id}</span><span class="surah-title"><strong>سورة ${escapeHtml(ch.name)}</strong><small>${ch.type === 'meccan' ? 'مكية' : 'مدنية'} • ${ch.total_verses} آية</small></span><button class="surah-complete ${done ? 'done' : ''}" onclick="event.stopPropagation();toggleSurahComplete(${ch.id})" aria-label="${done ? 'إلغاء إتمام السورة' : 'تعليم السورة كمكتملة'}"><i class="fas fa-check"></i></button><i class="fas fa-chevron-left surah-arrow"></i></article>`})()).join('') || '<div class="quran-empty">لا توجد سورة مطابقة.</div>'}
             </div>
-            <p class="quran-attribution">النص القرآني من مشروع Tanzil، نُقل دون تغيير. الإصدار v${window.ZAD_APP?.version || '4.9.3-beta.5.2'}</p>`;
+            <p class="quran-attribution">${mode==='uthmani'?'النص العثماني من مشروع Tanzil، نُقل دون تغيير.':'وضع قالون يستخدم بيانات 6214 المستقلة. عرض صفحة المصحف الليبي الأصلية يبقى منفصلًا حتى اعتماد مصدر الصفحة.'}</p>`;
+    }
+
+    let qaloonTextData = null;
+
+    async function loadQaloonText() {
+        if (qaloonTextData) return qaloonTextData;
+        const response = await fetch('quran-libya-data/qaloon-text.json');
+        if (!response.ok) throw new Error('تعذر تحميل نص قالون');
+        const data = await response.json();
+        const count = Object.values(data.verses || {}).reduce((n, verses) => n + verses.length, 0);
+        if (count !== 6214 || (data.surahs || []).length !== 114) throw new Error('فشل التحقق من اكتمال نص قالون');
+        qaloonTextData = data;
+        return data;
+    }
+
+    function qaloonVerseMarkup(verse, surahId, activeAyah) {
+        return `<button type="button" class="qaloon-text-ayah ${verse.ayah===+activeAyah?'is-active':''}" id="qaloon-text-${surahId}-${verse.ayah}" data-surah="${surahId}" data-ayah="${verse.ayah}" onclick="selectQaloonAyah(${surahId},${verse.ayah})"><span class="qaloon-ayah-text">${escapeHtml(verse.text)}</span><small>صفحة ${verse.page}</small></button>`;
+    }
+
+    function selectQaloonAyah(surahId, ayah) {
+        window.ZadQaloon?.save?.({surah:+surahId,ayah:+ayah,rangeStart:+ayah,rangeEnd:+ayah});
+        window.ZadQaloon?.stop?.();
+        document.querySelectorAll('.qaloon-text-ayah.is-active').forEach(el=>el.classList.remove('is-active'));
+        document.getElementById(`qaloon-text-${surahId}-${ayah}`)?.classList.add('is-active');
+        window.ZadQaloon?.attach?.(document.getElementById('qaloon-controls-host'),surahId,ayah);
+        window.ZadQaloon?.regionFor?.(surahId,ayah).then(region=>{if(region){const pos=document.getElementById('qaloon-text-position');if(pos)pos.textContent=`الآية ${ayah} • الصفحة ${region.page}`;window.ZadLibyaPage?.highlightText?.(surahId,ayah);}}).catch(()=>{});
+    }
+
+    async function openQaloonSurah(surahId, ayahNumber = 1) {
+        if (!chapters) return renderQuran();
+        let qaloon;
+        try { qaloon = await loadQaloonText(); } catch (error) { document.getElementById('page-content').innerHTML=errorMarkup(error); return; }
+        const chapter = chapters[surahId - 1];
+        localStorage.setItem(KEYS.mode, 'qaloon');
+        window.ZadQaloon?.save?.({surah:+surahId, ayah:+ayahNumber, rangeStart:+ayahNumber, rangeEnd:+ayahNumber});
+        const content = document.getElementById('page-content');
+        content.innerHTML = `<div class="reader-toolbar"><button onclick="renderQuranHome()"><i class="fas fa-arrow-right"></i><span>الفهرس</span></button><div><strong>سورة ${escapeHtml(chapter.name)}</strong><small>مصحف ليبيا • رواية قالون</small></div><span></span></div>
+            <div class="surah-ornament"><span>رواية قالون</span><h2>${escapeHtml(chapter.name)}</h2></div>
+            <div class="qaloon-reader-notice"><i class="fas fa-circle-check"></i><div><strong>نص قالون الليبي</strong><p>هذا النص مستخرج من قاعدة المصحف الليبي المستقلة (6214 آية)، ولا يستخدم ترقيم النص العثماني 6236.</p></div></div>
+            <div class="qaloon-view-switch"><button type="button" id="qaloon-view-text" class="is-active" onclick="setQaloonView('text',${surahId},${ayahNumber})"><i class="fas fa-align-right"></i> نص قالون</button><button type="button" id="qaloon-view-page" onclick="setQaloonView('page',${surahId},${ayahNumber})"><i class="fas fa-book-open"></i> صفحة المصحف</button></div>
+            <div id="qaloon-text-position" class="qaloon-text-position">الآية ${ayahNumber}</div>
+            <div id="qaloon-text-reader" class="qaloon-text-reader" aria-label="نص سورة ${escapeHtml(chapter.name)} برواية قالون">${(qaloon.verses[String(surahId)]||[]).map(v=>qaloonVerseMarkup(v,surahId,ayahNumber)).join('')}</div>
+            <div id="qaloon-page-reader" class="qaloon-page-reader" hidden></div>
+            <div id="qaloon-controls-host"></div>
+            <div class="reader-navigation"><button ${surahId<=1?'disabled':''} onclick="openQaloonSurah(${surahId-1},1)"><i class="fas fa-chevron-right"></i> السابقة</button><button onclick="renderQuranHome()"><i class="fas fa-list"></i> الفهرس</button><button ${surahId>=114?'disabled':''} onclick="openQaloonSurah(${surahId+1},1)">التالية <i class="fas fa-chevron-left"></i></button></div>`;
+        window.ZadQaloon?.attach?.(document.getElementById('qaloon-controls-host'), surahId, ayahNumber);
+        selectQaloonAyah(surahId, ayahNumber);
+        const preferredView=localStorage.getItem('zad_qaloon_view')==='page'?'page':'text';
+        if(preferredView==='page') setQaloonView('page',surahId,ayahNumber).catch(()=>{});
+        else requestAnimationFrame(()=>document.getElementById(`qaloon-text-${surahId}-${ayahNumber}`)?.scrollIntoView({block:'center'}));
+    }
+
+
+    async function setQaloonView(view, surahId, ayah) {
+        localStorage.setItem('zad_qaloon_view', view === 'page' ? 'page' : 'text');
+        const text = document.getElementById('qaloon-text-reader');
+        const pageHost = document.getElementById('qaloon-page-reader');
+        document.getElementById('qaloon-view-text')?.classList.toggle('is-active', view === 'text');
+        document.getElementById('qaloon-view-page')?.classList.toggle('is-active', view === 'page');
+        if (text) text.hidden = view !== 'text';
+        if (pageHost) pageHost.hidden = view !== 'page';
+        if (view !== 'page' || !pageHost) return;
+        const region = await window.ZadQaloon?.regionFor?.(surahId, ayah);
+        if (!region) { pageHost.textContent = 'تعذر تحديد صفحة الآية.'; return; }
+        await window.ZadLibyaPage?.mountTextPage?.(pageHost, region.page, {surah:+surahId, ayah:+ayah});
     }
 
     function openSurah(surahId, ayahNumber = 1) {
@@ -141,7 +213,7 @@
                 <button onclick="renderQuranHome()"><i class="fas fa-list"></i> الفهرس</button>
                 <button ${surahId >= 114 ? 'disabled' : ''} onclick="openSurah(${surahId + 1},1)">التالية <i class="fas fa-chevron-left"></i></button>
             </div>`;
-        if (window.ZadQaloon) { window.ZadQaloon.attach(content, surahId, ayahNumber); }
+        // Qaloon is intentionally not attached to the 6236 Uthmani DOM; the two numbering systems stay isolated.
         if (typeof window.onQuranSurahOpened === 'function') {
             window.onQuranSurahOpened({surahId, ayahNumber, chapter, verses});
         }
@@ -387,6 +459,10 @@
 
     window.renderQuran = renderQuran;
     window.renderQuranHome = renderQuranHome;
+    window.setQuranMode = setQuranMode;
+    window.selectQaloonAyah = selectQaloonAyah;
+    window.setQaloonView = setQaloonView;
+    window.openQaloonSurah = openQaloonSurah;
     window.openSurah = openSurah;
     window.filterSurahs = filterSurahs;
     window.toggleSurahComplete = toggleSurahComplete;
