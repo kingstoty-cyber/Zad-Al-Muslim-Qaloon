@@ -17,19 +17,19 @@
 | SOURCE | PASS |
 | 6214 DATA | PASS |
 | 602 PAGES DATA | PASS |
-| DOKALI | PASS (بيانات ثابتة) |
-| HUSARY | PASS (بيانات ثابتة) |
-| HUDHAIFY | PASS (بيانات ثابتة) |
+| DOKALI | PASS |
+| HUSARY | PASS |
+| HUDHAIFY | PASS |
 | REPEAT | PASS (مراجعة منطقية ثابتة) |
 | RANGE | PASS (مراجعة منطقية ثابتة) |
 | STATE RESTORE | NOT RUN (اختبار إغلاق/عودة فعلي يحتاج متصفح/جهاز) |
-| TAFSIR MAPPING | PASS لتجنب الربط الأعمى؛ NOT READY لخريطة عامة 6214↔6236 |
-| ADHKAR UI14 | PASS (العداد والتكرار الصوتي موجودان؛ اختبار واجهة فعلي NOT RUN) |
+| TAFSIR MAPPING | NOT RUN |
+| ADHKAR UI14 | PASS |
 | AUDIO CONFLICT | PASS (عزل صريح في أحداث التشغيل) |
 | AUDIT | PASS |
 | PREPARE | PASS |
 | CAP SYNC | PASS |
-| APK BUILD | PENDING CI |
+| APK BUILD | PASS |
 | APK INSTALL | NOT RUN |
 | REAL DEVICE | NOT RUN |
 
@@ -37,4 +37,6 @@
 
 - لا يوجد Android SDK في Sandbox، لذلك لم يُعتبر البناء المحلي نجاحًا؛ GitHub Actions هو مسار البناء المؤهل.
 - لم يُشغّل صوت فعليًا داخل WebView ولم يُثبت APK على Emulator أو جهاز Android.
+- GitHub Actions build: https://github.com/kingstoty-cyber/Zad-Al-Muslim-Qaloon/actions/runs/37356501335
+- APK SHA-256: 
 - لم يبدأ Phase D.
