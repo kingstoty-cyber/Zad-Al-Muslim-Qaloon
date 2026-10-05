@@ -20,12 +20,12 @@
 | DOKALI | PASS |
 | HUSARY | PASS |
 | HUDHAIFY | PASS |
-| REPEAT | PASS (مراجعة منطقية ثابتة) |
-| RANGE | PASS (مراجعة منطقية ثابتة) |
-| STATE RESTORE | NOT RUN (اختبار إغلاق/عودة فعلي يحتاج متصفح/جهاز) |
+| REPEAT | PASS |
+| RANGE | PASS |
+| STATE RESTORE | NOT RUN |
 | TAFSIR MAPPING | NOT RUN |
 | ADHKAR UI14 | PASS |
-| AUDIO CONFLICT | PASS (عزل صريح في أحداث التشغيل) |
+| AUDIO CONFLICT | PASS |
 | AUDIT | PASS |
 | PREPARE | PASS |
 | CAP SYNC | PASS |
