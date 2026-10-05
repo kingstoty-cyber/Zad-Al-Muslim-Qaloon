@@ -38,5 +38,5 @@
 - لا يوجد Android SDK في Sandbox، لذلك لم يُعتبر البناء المحلي نجاحًا؛ GitHub Actions هو مسار البناء المؤهل.
 - لم يُشغّل صوت فعليًا داخل WebView ولم يُثبت APK على Emulator أو جهاز Android.
 - GitHub Actions build: https://github.com/kingstoty-cyber/Zad-Al-Muslim-Qaloon/actions/runs/37356501335
-- APK SHA-256: 
+- APK SHA-256: `caf9cda57fcbfa9408a15aad855ca973ba9dacb1b4db54171031858cd0bf2563`
 - لم يبدأ Phase D.
