@@ -1,0 +1,14 @@
+/* UI15 — Libyan Qaloon Quran layer */
+.qaloon-panel{margin:12px 0;padding:14px;border:1px solid var(--border-color,#d8d2c5);border-radius:18px;background:var(--card-bg,#fff)}
+.qaloon-panel h3{margin:0 0 8px}.qaloon-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.qaloon-grid label{font-size:.82rem}.qaloon-grid select,.qaloon-grid input{width:100%;min-height:44px;border-radius:12px;border:1px solid var(--border-color,#ccc);background:var(--card-bg,#fff);color:inherit;padding:8px}
+.qaloon-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.qaloon-actions button{min-height:44px;border-radius:12px;padding:8px 12px}.qaloon-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 9px;border-radius:999px;background:var(--primary-soft,#f2ead4);font-size:.78rem}.ayah.qaloon-active{outline:3px solid var(--primary-color,#b08d34);outline-offset:3px;border-radius:12px}.ayah-info-sheet{margin-top:10px;padding:12px;border-radius:14px;background:var(--soft-bg,#f6f4ee)}.ayah-info-tabs{display:flex;gap:6px;overflow:auto}.ayah-info-tabs button{white-space:nowrap;min-height:40px}.qaloon-note{font-size:.78rem;opacity:.75;margin-top:8px}@media(max-width:360px){.qaloon-grid{grid-template-columns:1fr}}
+.qaloon-position,.qaloon-status{font-size:.82rem;opacity:.82;margin-top:5px}.qaloon-status{padding:8px 10px;border-radius:10px;background:var(--soft-bg,#f6f4ee)}
+
+/* UI15-C interactive Libya mushaf page overlay */
+.libya-mushaf-page{position:relative;max-width:760px;margin:auto;aspect-ratio:0.72;background:var(--card-bg,#fff);border-radius:18px;overflow:hidden}
+.libya-page-image{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.libya-ayah-overlay{position:absolute;inset:0;width:100%;height:100%;z-index:2}
+.libya-ayah-overlay polygon{fill:transparent;stroke:transparent;cursor:pointer;pointer-events:all}
+.libya-ayah-overlay polygon:focus,.libya-ayah-overlay polygon:hover{fill:rgba(194,155,62,.14);stroke:rgba(194,155,62,.55);stroke-width:.18}
+.libya-ayah-overlay polygon.is-active{fill:rgba(194,155,62,.26);stroke:rgba(194,155,62,.9);stroke-width:.22}
+.libya-page-source-pending{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:28px;text-align:center;opacity:.75}
