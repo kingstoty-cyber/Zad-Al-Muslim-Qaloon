@@ -177,13 +177,13 @@
         window.ZadQaloon?.save?.({surah:+surahId, ayah:+ayahNumber, rangeStart:+ayahNumber, rangeEnd:+ayahNumber});
         const content = document.getElementById('page-content');
         content.innerHTML = `<div class="reader-toolbar"><button onclick="renderQuranHome()"><i class="fas fa-arrow-right"></i><span>الفهرس</span></button><div><strong>سورة ${escapeHtml(chapter.name)}</strong><small>مصحف ليبيا • رواية قالون</small></div><button onclick="toggleQaloonFullscreen()" aria-label="ملء الشاشة"><i class="fas fa-expand"></i></button></div>
+            <div id="qaloon-controls-host" class="qaloon-controls-top"></div>
             <div id="qaloon-reading-stage" class="qaloon-reading-stage">
               <div class="surah-ornament"><span>رواية قالون</span><h2>${escapeHtml(chapter.name)}</h2></div>
               <div class="qaloon-page-toolbar"><button id="qaloon-prev-page" onclick="changeQaloonPage(-1)" aria-label="الصفحة السابقة"><i class="fas fa-chevron-right"></i></button><strong id="qaloon-page-number">صفحة</strong><button onclick="toggleQaloonFullscreen()" aria-label="ملء الشاشة"><i class="fas fa-expand"></i></button><button id="qaloon-next-page" onclick="changeQaloonPage(1)" aria-label="الصفحة التالية"><i class="fas fa-chevron-left"></i></button></div>
               <div id="qaloon-text-position" class="qaloon-text-position">الآية ${ayahNumber}</div>
               <div id="qaloon-page-reader" class="qaloon-page-reader"></div>
             </div>
-            <div id="qaloon-controls-host"></div>
             <div class="reader-navigation"><button ${surahId<=1?'disabled':''} onclick="openQaloonSurah(${surahId-1},1)"><i class="fas fa-chevron-right"></i> السابقة</button><button onclick="renderQuranHome()"><i class="fas fa-list"></i> الفهرس</button><button ${surahId>=114?'disabled':''} onclick="openQaloonSurah(${surahId+1},1)">التالية <i class="fas fa-chevron-left"></i></button></div>`;
         window.ZadQaloon?.attach?.(document.getElementById('qaloon-controls-host'), surahId, ayahNumber);
         const region=await window.ZadQaloon?.regionFor?.(surahId,ayahNumber);

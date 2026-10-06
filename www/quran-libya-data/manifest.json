@@ -6,6 +6,15 @@
   "reciters": [
     "dokali_qaloon",
     "husary_qaloon",
-    "hudhaifi_qaloon"
-  ]
+    "hudhaifi_qaloon",
+    "ahmed_trabelsi",
+    "tariq_daoub",
+    "ahmed_deban",
+    "mohamed_abusneina",
+    "ali_alyounse",
+    "taha_alfahd",
+    "ibrahim_kishidan",
+    "walid_alnaehi"
+  ],
+  "reciterTimingPolicy": "Only valid source timing points are included; invalid end_ms <= start_ms points are excluded without repair."
 }

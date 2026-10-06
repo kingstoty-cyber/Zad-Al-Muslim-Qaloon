@@ -1,0 +1,2633 @@
+{
+  "policy": "Invalid timing points are excluded, never guessed/repaired. Only source reciters with 114 surahs and 6214 source rows were admitted.",
+  "reciters": [
+    {
+      "id": "ahmed_trabelsi",
+      "name": "أحمد الطرابلسي",
+      "source_folder": "mp3quran_201_199",
+      "server": "https://server10.mp3quran.net/trablsi/",
+      "source_surahs": 114,
+      "source_rows": 6214,
+      "excluded_invalid": 6,
+      "usable_rows": 6208,
+      "excluded_points": [
+        {
+          "surah": 1,
+          "ayah": 1,
+          "start_ms": 6130,
+          "end_ms": 5785
+        },
+        {
+          "surah": 36,
+          "ayah": 79,
+          "start_ms": 1013562,
+          "end_ms": 1005918
+        },
+        {
+          "surah": 38,
+          "ayah": 63,
+          "start_ms": 843074,
+          "end_ms": 829445
+        },
+        {
+          "surah": 59,
+          "ayah": 22,
+          "start_ms": 662938,
+          "end_ms": 662338
+        },
+        {
+          "surah": 62,
+          "ayah": 4,
+          "start_ms": 63807,
+          "end_ms": 58877
+        },
+        {
+          "surah": 89,
+          "ayah": 4,
+          "start_ms": 12873,
+          "end_ms": 8236
+        }
+      ]
+    },
+    {
+      "id": "tariq_daoub",
+      "name": "طارق عبدالغني دعوب",
+      "source_folder": "mp3quran_212_212",
+      "server": "https://server10.mp3quran.net/tareq/",
+      "source_surahs": 114,
+      "source_rows": 6214,
+      "excluded_invalid": 19,
+      "usable_rows": 6195,
+      "excluded_points": [
+        {
+          "surah": 9,
+          "ayah": 49,
+          "start_ms": 1107755,
+          "end_ms": 1104147
+        },
+        {
+          "surah": 17,
+          "ayah": 81,
+          "start_ms": 1418638,
+          "end_ms": 1413931
+        },
+        {
+          "surah": 20,
+          "ayah": 116,
+          "start_ms": 1380942,
+          "end_ms": 1378906
+        },
+        {
+          "surah": 21,
+          "ayah": 42,
+          "start_ms": 568310,
+          "end_ms": 558720
+        },
+        {
+          "surah": 29,
+          "ayah": 43,
+          "start_ms": 822141,
+          "end_ms": 819213
+        },
+        {
+          "surah": 36,
+          "ayah": 58,
+          "start_ms": 679072,
+          "end_ms": 667502
+        },
+        {
+          "surah": 36,
+          "ayah": 59,
+          "start_ms": 667502,
+          "end_ms": 667379
+        },
+        {
+          "surah": 37,
+          "ayah": 55,
+          "start_ms": 413456,
+          "end_ms": 404539
+        },
+        {
+          "surah": 39,
+          "ayah": 32,
+          "start_ms": 603600,
+          "end_ms": 594985
+        },
+        {
+          "surah": 41,
+          "ayah": 7,
+          "start_ms": 125830,
+          "end_ms": 113857
+        },
+        {
+          "surah": 52,
+          "ayah": 20,
+          "start_ms": 161636,
+          "end_ms": 158656
+        },
+        {
+          "surah": 52,
+          "ayah": 27,
+          "start_ms": 230621,
+          "end_ms": 214506
+        },
+        {
+          "surah": 68,
+          "ayah": 13,
+          "start_ms": 77306,
+          "end_ms": 75186
+        },
+        {
+          "surah": 68,
+          "ayah": 27,
+          "start_ms": 174389,
+          "end_ms": 165945
+        },
+        {
+          "surah": 74,
+          "ayah": 39,
+          "start_ms": 220975,
+          "end_ms": 219435
+        },
+        {
+          "surah": 80,
+          "ayah": 21,
+          "start_ms": 96522,
+          "end_ms": 81945
+        },
+        {
+          "surah": 81,
+          "ayah": 25,
+          "start_ms": 135134,
+          "end_ms": 119649
+        },
+        {
+          "surah": 82,
+          "ayah": 8,
+          "start_ms": 47851,
+          "end_ms": 47407
+        },
+        {
+          "surah": 85,
+          "ayah": 8,
+          "start_ms": 54944,
+          "end_ms": 40130
+        }
+      ]
+    },
+    {
+      "id": "ahmed_deban",
+      "name": "أحمد ديبان",
+      "source_folder": "mp3quran_265_280",
+      "server": "https://server16.mp3quran.net/deban/Rewayat-Qalon-A-n-Nafi/",
+      "source_surahs": 114,
+      "source_rows": 6214,
+      "excluded_invalid": 12,
+      "usable_rows": 6202,
+      "excluded_points": [
+        {
+          "surah": 20,
+          "ayah": 3,
+          "start_ms": 15992,
+          "end_ms": 12476
+        },
+        {
+          "surah": 26,
+          "ayah": 3,
+          "start_ms": 25702,
+          "end_ms": 21131
+        },
+        {
+          "surah": 42,
+          "ayah": 2,
+          "start_ms": 28872,
+          "end_ms": 19076
+        },
+        {
+          "surah": 48,
+          "ayah": 3,
+          "start_ms": 28458,
+          "end_ms": 18029
+        },
+        {
+          "surah": 52,
+          "ayah": 2,
+          "start_ms": 10729,
+          "end_ms": 8324
+        },
+        {
+          "surah": 68,
+          "ayah": 9,
+          "start_ms": 49162,
+          "end_ms": 44278
+        },
+        {
+          "surah": 70,
+          "ayah": 3,
+          "start_ms": 14367,
+          "end_ms": 10584
+        },
+        {
+          "surah": 73,
+          "ayah": 3,
+          "start_ms": 11610,
+          "end_ms": 10125
+        },
+        {
+          "surah": 80,
+          "ayah": 5,
+          "start_ms": 22702,
+          "end_ms": 15071
+        },
+        {
+          "surah": 85,
+          "ayah": 7,
+          "start_ms": 27065,
+          "end_ms": 18373
+        },
+        {
+          "surah": 90,
+          "ayah": 4,
+          "start_ms": 15399,
+          "end_ms": 11900
+        },
+        {
+          "surah": 100,
+          "ayah": 3,
+          "start_ms": 10366,
+          "end_ms": 8743
+        }
+      ]
+    },
+    {
+      "id": "mohamed_abusneina",
+      "name": "محمد أبو سنينة",
+      "source_folder": "mp3quran_274_274",
+      "server": "https://server16.mp3quran.net/sneineh/Rewayat-Qalon-A-n-Nafi/",
+      "source_surahs": 114,
+      "source_rows": 6214,
+      "excluded_invalid": 17,
+      "usable_rows": 6197,
+      "excluded_points": [
+        {
+          "surah": 10,
+          "ayah": 38,
+          "start_ms": 977318,
+          "end_ms": 965835
+        },
+        {
+          "surah": 15,
+          "ayah": 30,
+          "start_ms": 335877,
+          "end_ms": 330507
+        },
+        {
+          "surah": 27,
+          "ayah": 53,
+          "start_ms": 785862,
+          "end_ms": 778335
+        },
+        {
+          "surah": 30,
+          "ayah": 2,
+          "start_ms": 15317,
+          "end_ms": 11894
+        },
+        {
+          "surah": 42,
+          "ayah": 36,
+          "start_ms": 780300,
+          "end_ms": 773784
+        },
+        {
+          "surah": 43,
+          "ayah": 28,
+          "start_ms": 354712,
+          "end_ms": 347440
+        },
+        {
+          "surah": 43,
+          "ayah": 62,
+          "start_ms": 782747,
+          "end_ms": 776308
+        },
+        {
+          "surah": 50,
+          "ayah": 1,
+          "start_ms": 8708,
+          "end_ms": 7674
+        },
+        {
+          "surah": 61,
+          "ayah": 2,
+          "start_ms": 27060,
+          "end_ms": 23293
+        },
+        {
+          "surah": 67,
+          "ayah": 2,
+          "start_ms": 11894,
+          "end_ms": 11254
+        },
+        {
+          "surah": 68,
+          "ayah": 26,
+          "start_ms": 153758,
+          "end_ms": 136158
+        },
+        {
+          "surah": 71,
+          "ayah": 9,
+          "start_ms": 85688,
+          "end_ms": 85280
+        },
+        {
+          "surah": 76,
+          "ayah": 24,
+          "start_ms": 263269,
+          "end_ms": 249002
+        },
+        {
+          "surah": 79,
+          "ayah": 19,
+          "start_ms": 80447,
+          "end_ms": 66231
+        },
+        {
+          "surah": 88,
+          "ayah": 5,
+          "start_ms": 20042,
+          "end_ms": 11621
+        },
+        {
+          "surah": 95,
+          "ayah": 2,
+          "start_ms": 7988,
+          "end_ms": 6114
+        },
+        {
+          "surah": 98,
+          "ayah": 3,
+          "start_ms": 25260,
+          "end_ms": 15350
+        }
+      ]
+    },
+    {
+      "id": "ali_alyounse",
+      "name": "علي اليونسي",
+      "source_folder": "ali_alyounse",
+      "server": "https://quran-audio.abdeljawad.com/audio/ali_alyounse/",
+      "source_surahs": 114,
+      "source_rows": 6214,
+      "excluded_invalid": 17,
+      "usable_rows": 6197,
+      "excluded_points": [
+        {
+          "surah": 1,
+          "ayah": 1,
+          "start_ms": 12757,
+          "end_ms": 12298
+        },
+        {
+          "surah": 1,
+          "ayah": 2,
+          "start_ms": 12298,
+          "end_ms": 12298
+        },
+        {
+          "surah": 3,
+          "ayah": 46,
+          "start_ms": 1027476,
+          "end_ms": 1027476
+        },
+        {
+          "surah": 15,
+          "ayah": 59,
+          "start_ms": 564432,
+          "end_ms": 564432
+        },
+        {
+          "surah": 18,
+          "ayah": 101,
+          "start_ms": 1750807,
+          "end_ms": 1747587
+        },
+        {
+          "surah": 20,
+          "ayah": 3,
+          "start_ms": 26392,
+          "end_ms": 21089
+        },
+        {
+          "surah": 26,
+          "ayah": 3,
+          "start_ms": 30377,
+          "end_ms": 22268
+        },
+        {
+          "surah": 26,
+          "ayah": 196,
+          "start_ms": 1584648,
+          "end_ms": 1579533
+        },
+        {
+          "surah": 38,
+          "ayah": 6,
+          "start_ms": 75030,
+          "end_ms": 72422
+        },
+        {
+          "surah": 38,
+          "ayah": 27,
+          "start_ms": 393765,
+          "end_ms": 387296
+        },
+        {
+          "surah": 42,
+          "ayah": 2,
+          "start_ms": 29400,
+          "end_ms": 19400
+        },
+        {
+          "surah": 50,
+          "ayah": 3,
+          "start_ms": 24547,
+          "end_ms": 17032
+        },
+        {
+          "surah": 51,
+          "ayah": 8,
+          "start_ms": 32591,
+          "end_ms": 18136
+        },
+        {
+          "surah": 79,
+          "ayah": 44,
+          "start_ms": 223452,
+          "end_ms": 210367
+        },
+        {
+          "surah": 82,
+          "ayah": 5,
+          "start_ms": 22093,
+          "end_ms": 16287
+        },
+        {
+          "surah": 89,
+          "ayah": 18,
+          "start_ms": 84538,
+          "end_ms": 82987
+        },
+        {
+          "surah": 92,
+          "ayah": 14,
+          "start_ms": 58488,
+          "end_ms": 40273
+        }
+      ]
+    },
+    {
+      "id": "ahmed_algriw",
+      "name": "أحمد أحمد القريو",
+      "source_folder": "ahmed_algriw",
+      "server": "https://quran-audio.abdeljawad.com/audio/ahmed_algriw/",
+      "source_surahs": 114,
+      "source_rows": 6214,
+      "excluded_invalid": 73,
+      "usable_rows": 6141,
+      "excluded_points": [
+        {
+          "surah": 2,
+          "ayah": 65,
+          "start_ms": 1904148,
+          "end_ms": 1895850
+        },
+        {
+          "surah": 3,
+          "ayah": 3,
+          "start_ms": 42942,
+          "end_ms": 25311
+        },
+        {
+          "surah": 4,
+          "ayah": 148,
+          "start_ms": 5554928,
+          "end_ms": 5554928
+        },
+        {
+          "surah": 4,
+          "ayah": 157,
+          "start_ms": 5930724,
+          "end_ms": 5919974
+        },
+        {
+          "surah": 5,
+          "ayah": 31,
+          "start_ms": 1322190,
+          "end_ms": 1320825
+        },
+        {
+          "surah": 7,
+          "ayah": 147,
+          "start_ms": 3633830,
+          "end_ms": 3630193
+        },
+        {
+          "surah": 7,
+          "ayah": 170,
+          "start_ms": 4593936,
+          "end_ms": 4593936
+        },
+        {
+          "surah": 7,
+          "ayah": 192,
+          "start_ms": 5199100,
+          "end_ms": 5191446
+        },
+        {
+          "surah": 8,
+          "ayah": 21,
+          "start_ms": 588958,
+          "end_ms": 581572
+        },
+        {
+          "surah": 9,
+          "ayah": 39,
+          "start_ms": 1358498,
+          "end_ms": 1356246
+        },
+        {
+          "surah": 9,
+          "ayah": 78,
+          "start_ms": 2685243,
+          "end_ms": 2682476
+        },
+        {
+          "surah": 12,
+          "ayah": 3,
+          "start_ms": 36958,
+          "end_ms": 30530
+        },
+        {
+          "surah": 12,
+          "ayah": 42,
+          "start_ms": 1051731,
+          "end_ms": 1050916
+        },
+        {
+          "surah": 12,
+          "ayah": 58,
+          "start_ms": 1396905,
+          "end_ms": 1387410
+        },
+        {
+          "surah": 12,
+          "ayah": 95,
+          "start_ms": 2339198,
+          "end_ms": 2330724
+        },
+        {
+          "surah": 12,
+          "ayah": 103,
+          "start_ms": 2578398,
+          "end_ms": 2567773
+        },
+        {
+          "surah": 15,
+          "ayah": 61,
+          "start_ms": 676956,
+          "end_ms": 671406
+        },
+        {
+          "surah": 15,
+          "ayah": 65,
+          "start_ms": 696116,
+          "end_ms": 692585
+        },
+        {
+          "surah": 17,
+          "ayah": 90,
+          "start_ms": 2189756,
+          "end_ms": 2185351
+        },
+        {
+          "surah": 18,
+          "ayah": 3,
+          "start_ms": 52144,
+          "end_ms": 46833
+        },
+        {
+          "surah": 20,
+          "ayah": 101,
+          "start_ms": 1479123,
+          "end_ms": 1476082
+        },
+        {
+          "surah": 20,
+          "ayah": 125,
+          "start_ms": 1895706,
+          "end_ms": 1887393
+        },
+        {
+          "surah": 21,
+          "ayah": 20,
+          "start_ms": 359536,
+          "end_ms": 348024
+        },
+        {
+          "surah": 21,
+          "ayah": 42,
+          "start_ms": 795163,
+          "end_ms": 787074
+        },
+        {
+          "surah": 22,
+          "ayah": 49,
+          "start_ms": 1477390,
+          "end_ms": 1467398
+        },
+        {
+          "surah": 23,
+          "ayah": 5,
+          "start_ms": 38608,
+          "end_ms": 21344
+        },
+        {
+          "surah": 23,
+          "ayah": 22,
+          "start_ms": 308523,
+          "end_ms": 288123
+        },
+        {
+          "surah": 27,
+          "ayah": 9,
+          "start_ms": 136248,
+          "end_ms": 125634
+        },
+        {
+          "surah": 27,
+          "ayah": 13,
+          "start_ms": 250219,
+          "end_ms": 250219
+        },
+        {
+          "surah": 29,
+          "ayah": 12,
+          "start_ms": 262729,
+          "end_ms": 254610
+        },
+        {
+          "surah": 29,
+          "ayah": 17,
+          "start_ms": 385234,
+          "end_ms": 377315
+        },
+        {
+          "surah": 29,
+          "ayah": 28,
+          "start_ms": 668568,
+          "end_ms": 667832
+        },
+        {
+          "surah": 29,
+          "ayah": 56,
+          "start_ms": 1446348,
+          "end_ms": 1439786
+        },
+        {
+          "surah": 30,
+          "ayah": 33,
+          "start_ms": 667518,
+          "end_ms": 664064
+        },
+        {
+          "surah": 36,
+          "ayah": 66,
+          "start_ms": 879059,
+          "end_ms": 876713
+        },
+        {
+          "surah": 36,
+          "ayah": 71,
+          "start_ms": 966552,
+          "end_ms": 963812
+        },
+        {
+          "surah": 37,
+          "ayah": 57,
+          "start_ms": 513220,
+          "end_ms": 496295
+        },
+        {
+          "surah": 38,
+          "ayah": 4,
+          "start_ms": 59767,
+          "end_ms": 54317
+        },
+        {
+          "surah": 39,
+          "ayah": 19,
+          "start_ms": 480209,
+          "end_ms": 475752
+        },
+        {
+          "surah": 39,
+          "ayah": 55,
+          "start_ms": 1322030,
+          "end_ms": 1320925
+        },
+        {
+          "surah": 40,
+          "ayah": 49,
+          "start_ms": 1168262,
+          "end_ms": 1158937
+        },
+        {
+          "surah": 40,
+          "ayah": 54,
+          "start_ms": 1243808,
+          "end_ms": 1239748
+        },
+        {
+          "surah": 41,
+          "ayah": 3,
+          "start_ms": 25450,
+          "end_ms": 19141
+        },
+        {
+          "surah": 43,
+          "ayah": 57,
+          "start_ms": 988202,
+          "end_ms": 980657
+        },
+        {
+          "surah": 43,
+          "ayah": 64,
+          "start_ms": 1116602,
+          "end_ms": 1107247
+        },
+        {
+          "surah": 44,
+          "ayah": 55,
+          "start_ms": 580136,
+          "end_ms": 579607
+        },
+        {
+          "surah": 45,
+          "ayah": 6,
+          "start_ms": 108078,
+          "end_ms": 92498
+        },
+        {
+          "surah": 47,
+          "ayah": 6,
+          "start_ms": 145556,
+          "end_ms": 144876
+        },
+        {
+          "surah": 47,
+          "ayah": 10,
+          "start_ms": 177838,
+          "end_ms": 175610
+        },
+        {
+          "surah": 50,
+          "ayah": 1,
+          "start_ms": 12063,
+          "end_ms": 7112
+        },
+        {
+          "surah": 51,
+          "ayah": 2,
+          "start_ms": 17713,
+          "end_ms": 17713
+        },
+        {
+          "surah": 56,
+          "ayah": 26,
+          "start_ms": 154439,
+          "end_ms": 153320
+        },
+        {
+          "surah": 56,
+          "ayah": 58,
+          "start_ms": 398028,
+          "end_ms": 388298
+        },
+        {
+          "surah": 64,
+          "ayah": 17,
+          "start_ms": 335723,
+          "end_ms": 331370
+        },
+        {
+          "surah": 66,
+          "ayah": 7,
+          "start_ms": 202425,
+          "end_ms": 193784
+        },
+        {
+          "surah": 69,
+          "ayah": 24,
+          "start_ms": 265302,
+          "end_ms": 240716
+        },
+        {
+          "surah": 69,
+          "ayah": 40,
+          "start_ms": 357562,
+          "end_ms": 351100
+        },
+        {
+          "surah": 70,
+          "ayah": 21,
+          "start_ms": 122601,
+          "end_ms": 112831
+        },
+        {
+          "surah": 71,
+          "ayah": 14,
+          "start_ms": 190447,
+          "end_ms": 165318
+        },
+        {
+          "surah": 74,
+          "ayah": 29,
+          "start_ms": 147522,
+          "end_ms": 141447
+        },
+        {
+          "surah": 74,
+          "ayah": 30,
+          "start_ms": 141447,
+          "end_ms": 140450
+        },
+        {
+          "surah": 76,
+          "ayah": 10,
+          "start_ms": 137687,
+          "end_ms": 134930
+        },
+        {
+          "surah": 81,
+          "ayah": 1,
+          "start_ms": 4640,
+          "end_ms": 4400
+        },
+        {
+          "surah": 83,
+          "ayah": 12,
+          "start_ms": 91373,
+          "end_ms": 87898
+        },
+        {
+          "surah": 83,
+          "ayah": 22,
+          "start_ms": 170144,
+          "end_ms": 162938
+        },
+        {
+          "surah": 85,
+          "ayah": 7,
+          "start_ms": 36900,
+          "end_ms": 23808
+        },
+        {
+          "surah": 85,
+          "ayah": 9,
+          "start_ms": 76372,
+          "end_ms": 76372
+        },
+        {
+          "surah": 86,
+          "ayah": 3,
+          "start_ms": 8604,
+          "end_ms": 7669
+        },
+        {
+          "surah": 87,
+          "ayah": 8,
+          "start_ms": 50342,
+          "end_ms": 40155
+        },
+        {
+          "surah": 93,
+          "ayah": 5,
+          "start_ms": 37440,
+          "end_ms": 30896
+        },
+        {
+          "surah": 96,
+          "ayah": 5,
+          "start_ms": 31288,
+          "end_ms": 17964
+        },
+        {
+          "surah": 98,
+          "ayah": 3,
+          "start_ms": 34619,
+          "end_ms": 23390
+        },
+        {
+          "surah": 106,
+          "ayah": 1,
+          "start_ms": 8338,
+          "end_ms": 6409
+        }
+      ]
+    },
+    {
+      "id": "taha_alfahd",
+      "name": "طه الفهد",
+      "source_folder": "taha_alfahd",
+      "server": "https://quran-audio.abdeljawad.com/audio/taha_alfahd/",
+      "source_surahs": 114,
+      "source_rows": 6214,
+      "excluded_invalid": 12,
+      "usable_rows": 6202,
+      "excluded_points": [
+        {
+          "surah": 7,
+          "ayah": 3,
+          "start_ms": 47568,
+          "end_ms": 37435
+        },
+        {
+          "surah": 11,
+          "ayah": 14,
+          "start_ms": 279047,
+          "end_ms": 278111
+        },
+        {
+          "surah": 19,
+          "ayah": 3,
+          "start_ms": 32494,
+          "end_ms": 24259
+        },
+        {
+          "surah": 29,
+          "ayah": 12,
+          "start_ms": 190426,
+          "end_ms": 189472
+        },
+        {
+          "surah": 30,
+          "ayah": 3,
+          "start_ms": 25474,
+          "end_ms": 18812
+        },
+        {
+          "surah": 32,
+          "ayah": 11,
+          "start_ms": 139986,
+          "end_ms": 134767
+        },
+        {
+          "surah": 38,
+          "ayah": 73,
+          "start_ms": 785865,
+          "end_ms": 779698
+        },
+        {
+          "surah": 54,
+          "ayah": 11,
+          "start_ms": 88629,
+          "end_ms": 87936
+        },
+        {
+          "surah": 54,
+          "ayah": 33,
+          "start_ms": 257395,
+          "end_ms": 255236
+        },
+        {
+          "surah": 68,
+          "ayah": 43,
+          "start_ms": 267355,
+          "end_ms": 259419
+        },
+        {
+          "surah": 88,
+          "ayah": 2,
+          "start_ms": 10730,
+          "end_ms": 8205
+        },
+        {
+          "surah": 89,
+          "ayah": 31,
+          "start_ms": 196178,
+          "end_ms": 185132
+        }
+      ]
+    },
+    {
+      "id": "ibrahim_kishidan",
+      "name": "إبراهيم كشيدان",
+      "source_folder": "ibrahim_kishidan",
+      "server": "https://quran-audio.abdeljawad.com/audio/ibrahim_kishidan/",
+      "source_surahs": 114,
+      "source_rows": 6214,
+      "excluded_invalid": 5,
+      "usable_rows": 6209,
+      "excluded_points": [
+        {
+          "surah": 26,
+          "ayah": 49,
+          "start_ms": 393940,
+          "end_ms": 393104
+        },
+        {
+          "surah": 30,
+          "ayah": 3,
+          "start_ms": 22390,
+          "end_ms": 18647
+        },
+        {
+          "surah": 33,
+          "ayah": 68,
+          "start_ms": 1456280,
+          "end_ms": 1454327
+        },
+        {
+          "surah": 37,
+          "ayah": 6,
+          "start_ms": 26644,
+          "end_ms": 18814
+        },
+        {
+          "surah": 107,
+          "ayah": 1,
+          "start_ms": 5590,
+          "end_ms": 5355
+        }
+      ]
+    },
+    {
+      "id": "walid_alnaehi",
+      "name": "وليد النائحي",
+      "source_folder": "walid_alnaehi",
+      "server": "https://quran-audio.abdeljawad.com/audio/walid_alnaehi/",
+      "source_surahs": 114,
+      "source_rows": 6214,
+      "excluded_invalid": 5,
+      "usable_rows": 6209,
+      "excluded_points": [
+        {
+          "surah": 17,
+          "ayah": 62,
+          "start_ms": 981679,
+          "end_ms": 981679
+        },
+        {
+          "surah": 20,
+          "ayah": 28,
+          "start_ms": 194774,
+          "end_ms": 183982
+        },
+        {
+          "surah": 20,
+          "ayah": 29,
+          "start_ms": 183982,
+          "end_ms": 183982
+        },
+        {
+          "surah": 42,
+          "ayah": 40,
+          "start_ms": 695132,
+          "end_ms": 690256
+        },
+        {
+          "surah": 50,
+          "ayah": 10,
+          "start_ms": 102140,
+          "end_ms": 86226
+        }
+      ]
+    },
+    {
+      "id": "ahmed_alqulaib",
+      "name": "أحمد عبدالله القليب",
+      "source_folder": "ahmed_alqulaib",
+      "server": "https://quran-audio.abdeljawad.com/audio/ahmed_alqulaib/",
+      "source_surahs": 114,
+      "source_rows": 6214,
+      "excluded_invalid": 41,
+      "usable_rows": 6173,
+      "excluded_points": [
+        {
+          "surah": 3,
+          "ayah": 3,
+          "start_ms": 25354,
+          "end_ms": 15197
+        },
+        {
+          "surah": 4,
+          "ayah": 71,
+          "start_ms": 1862340,
+          "end_ms": 1862340
+        },
+        {
+          "surah": 4,
+          "ayah": 72,
+          "start_ms": 1862340,
+          "end_ms": 1862340
+        },
+        {
+          "surah": 4,
+          "ayah": 73,
+          "start_ms": 1862340,
+          "end_ms": 1862340
+        },
+        {
+          "surah": 4,
+          "ayah": 74,
+          "start_ms": 1862340,
+          "end_ms": 1862340
+        },
+        {
+          "surah": 4,
+          "ayah": 75,
+          "start_ms": 1862340,
+          "end_ms": 1862340
+        },
+        {
+          "surah": 4,
+          "ayah": 76,
+          "start_ms": 1862340,
+          "end_ms": 1862340
+        },
+        {
+          "surah": 4,
+          "ayah": 77,
+          "start_ms": 1862340,
+          "end_ms": 1862340
+        },
+        {
+          "surah": 4,
+          "ayah": 78,
+          "start_ms": 1862340,
+          "end_ms": 1862340
+        },
+        {
+          "surah": 4,
+          "ayah": 79,
+          "start_ms": 1862340,
+          "end_ms": 1862340
+        },
+        {
+          "surah": 4,
+          "ayah": 80,
+          "start_ms": 1862340,
+          "end_ms": 1862340
+        },
+        {
+          "surah": 4,
+          "ayah": 81,
+          "start_ms": 1862340,
+          "end_ms": 1862340
+        },
+        {
+          "surah": 4,
+          "ayah": 82,
+          "start_ms": 1862340,
+          "end_ms": 1862340
+        },
+        {
+          "surah": 4,
+          "ayah": 83,
+          "start_ms": 1862340,
+          "end_ms": 1862340
+        },
+        {
+          "surah": 4,
+          "ayah": 84,
+          "start_ms": 1862340,
+          "end_ms": 1862340
+        },
+        {
+          "surah": 4,
+          "ayah": 85,
+          "start_ms": 1862340,
+          "end_ms": 1862340
+        },
+        {
+          "surah": 4,
+          "ayah": 86,
+          "start_ms": 1862340,
+          "end_ms": 1862340
+        },
+        {
+          "surah": 4,
+          "ayah": 87,
+          "start_ms": 1862340,
+          "end_ms": 1862340
+        },
+        {
+          "surah": 4,
+          "ayah": 88,
+          "start_ms": 1862340,
+          "end_ms": 1862340
+        },
+        {
+          "surah": 4,
+          "ayah": 89,
+          "start_ms": 1862340,
+          "end_ms": 1862340
+        },
+        {
+          "surah": 4,
+          "ayah": 90,
+          "start_ms": 1862340,
+          "end_ms": 1862340
+        },
+        {
+          "surah": 4,
+          "ayah": 91,
+          "start_ms": 1862340,
+          "end_ms": 1862340
+        },
+        {
+          "surah": 4,
+          "ayah": 92,
+          "start_ms": 1862340,
+          "end_ms": 1862340
+        },
+        {
+          "surah": 4,
+          "ayah": 93,
+          "start_ms": 1862340,
+          "end_ms": 1862340
+        },
+        {
+          "surah": 4,
+          "ayah": 94,
+          "start_ms": 1862340,
+          "end_ms": 1862340
+        },
+        {
+          "surah": 4,
+          "ayah": 95,
+          "start_ms": 1862340,
+          "end_ms": 1862340
+        },
+        {
+          "surah": 4,
+          "ayah": 96,
+          "start_ms": 1862340,
+          "end_ms": 1862340
+        },
+        {
+          "surah": 4,
+          "ayah": 97,
+          "start_ms": 1862340,
+          "end_ms": 1862340
+        },
+        {
+          "surah": 4,
+          "ayah": 98,
+          "start_ms": 1862340,
+          "end_ms": 1862340
+        },
+        {
+          "surah": 5,
+          "ayah": 101,
+          "start_ms": 2185226,
+          "end_ms": 2176122
+        },
+        {
+          "surah": 8,
+          "ayah": 5,
+          "start_ms": 66550,
+          "end_ms": 56542
+        },
+        {
+          "surah": 20,
+          "ayah": 30,
+          "start_ms": 177787,
+          "end_ms": 174951
+        },
+        {
+          "surah": 28,
+          "ayah": 69,
+          "start_ms": 1114703,
+          "end_ms": 1108282
+        },
+        {
+          "surah": 29,
+          "ayah": 37,
+          "start_ms": 524533,
+          "end_ms": 516800
+        },
+        {
+          "surah": 36,
+          "ayah": 6,
+          "start_ms": 26813,
+          "end_ms": 15846
+        },
+        {
+          "surah": 39,
+          "ayah": 37,
+          "start_ms": 664101,
+          "end_ms": 662484
+        },
+        {
+          "surah": 40,
+          "ayah": 51,
+          "start_ms": 772630,
+          "end_ms": 772630
+        },
+        {
+          "surah": 53,
+          "ayah": 3,
+          "start_ms": 9816,
+          "end_ms": 6428
+        },
+        {
+          "surah": 69,
+          "ayah": 50,
+          "start_ms": 310610,
+          "end_ms": 308430
+        },
+        {
+          "surah": 86,
+          "ayah": 3,
+          "start_ms": 10771,
+          "end_ms": 6546
+        },
+        {
+          "surah": 90,
+          "ayah": 7,
+          "start_ms": 29024,
+          "end_ms": 16272
+        }
+      ]
+    },
+    {
+      "id": "bilal_ben_mahmoud",
+      "name": "بلال بن محمود",
+      "source_folder": "bilal_ben_mahmoud",
+      "server": "https://quran-audio.abdeljawad.com/audio/bilal_ben_mahmoud/",
+      "source_surahs": 114,
+      "source_rows": 6214,
+      "excluded_invalid": 209,
+      "usable_rows": 6005,
+      "excluded_points": [
+        {
+          "surah": 2,
+          "ayah": 91,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 92,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 93,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 94,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 95,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 96,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 97,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 98,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 99,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 100,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 101,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 102,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 103,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 104,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 105,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 106,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 107,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 108,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 109,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 110,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 111,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 112,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 113,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 114,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 115,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 116,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 117,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 118,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 119,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 120,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 121,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 122,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 123,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 124,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 125,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 126,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 127,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 128,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 129,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 130,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 131,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 132,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 133,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 134,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 135,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 136,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 137,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 138,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 139,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 140,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 141,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 142,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 143,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 144,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 145,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 146,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 147,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 148,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 149,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 150,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 151,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 152,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 153,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 154,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 155,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 156,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 157,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 158,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 159,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 160,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 161,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 162,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 163,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 164,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 165,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 166,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 167,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 168,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 169,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 170,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 171,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 172,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 173,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 174,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 175,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 176,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 177,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 178,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 179,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 180,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 181,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 182,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 183,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 184,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 185,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 186,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 187,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 188,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 189,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 190,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 191,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 192,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 193,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 194,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 195,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 196,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 197,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 198,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 199,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 200,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 201,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 202,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 203,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 204,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 205,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 206,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 207,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 208,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 209,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 210,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 211,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 212,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 213,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 214,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 215,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 216,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 217,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 218,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 219,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 220,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 221,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 222,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 223,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 224,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 225,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 226,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 227,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 228,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 229,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 230,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 231,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 232,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 233,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 234,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 235,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 236,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 237,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 238,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 239,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 240,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 241,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 242,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 243,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 244,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 245,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 246,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 247,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 248,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 249,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 250,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 251,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 252,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 253,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 254,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 255,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 256,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 257,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 258,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 259,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 260,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 261,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 262,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 263,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 264,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 265,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 266,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 267,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 268,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 269,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 270,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 271,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 272,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 273,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 274,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 275,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 276,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 277,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 278,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 279,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 280,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 281,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 282,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 283,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 284,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 2,
+          "ayah": 285,
+          "start_ms": 1577788,
+          "end_ms": 1577788
+        },
+        {
+          "surah": 3,
+          "ayah": 31,
+          "start_ms": 576214,
+          "end_ms": 573520
+        },
+        {
+          "surah": 3,
+          "ayah": 108,
+          "start_ms": 2010256,
+          "end_ms": 2004135
+        },
+        {
+          "surah": 5,
+          "ayah": 115,
+          "start_ms": 2885094,
+          "end_ms": 2876476
+        },
+        {
+          "surah": 6,
+          "ayah": 165,
+          "start_ms": 3172321,
+          "end_ms": 3168726
+        },
+        {
+          "surah": 7,
+          "ayah": 67,
+          "start_ms": 1067051,
+          "end_ms": 1052115
+        },
+        {
+          "surah": 9,
+          "ayah": 96,
+          "start_ms": 1755798,
+          "end_ms": 1755798
+        },
+        {
+          "surah": 16,
+          "ayah": 34,
+          "start_ms": 354846,
+          "end_ms": 349452
+        },
+        {
+          "surah": 16,
+          "ayah": 52,
+          "start_ms": 581456,
+          "end_ms": 578509
+        },
+        {
+          "surah": 23,
+          "ayah": 105,
+          "start_ms": 890536,
+          "end_ms": 888254
+        },
+        {
+          "surah": 23,
+          "ayah": 113,
+          "start_ms": 979232,
+          "end_ms": 964518
+        },
+        {
+          "surah": 26,
+          "ayah": 24,
+          "start_ms": 152724,
+          "end_ms": 146408
+        },
+        {
+          "surah": 26,
+          "ayah": 25,
+          "start_ms": 146408,
+          "end_ms": 146408
+        },
+        {
+          "surah": 38,
+          "ayah": 24,
+          "start_ms": 247588,
+          "end_ms": 241548
+        },
+        {
+          "surah": 110,
+          "ayah": 2,
+          "start_ms": 10077,
+          "end_ms": 8438
+        }
+      ]
+    }
+  ]
+}
