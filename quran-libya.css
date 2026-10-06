@@ -47,3 +47,8 @@
 .qaloon-reading-stage.qaloon-fullscreen-fallback .libya-text-page{max-width:760px;margin:10px auto}
 .qaloon-reading-stage.qaloon-fullscreen-fallback .qaloon-page-toolbar,.qaloon-reading-stage.qaloon-fullscreen-fallback .qaloon-text-position,.qaloon-reading-stage.qaloon-fullscreen-fallback .surah-ornament{max-width:760px;margin-left:auto;margin-right:auto}
 @media(max-width:360px){.qaloon-page-toolbar{grid-template-columns:44px 1fr 44px 44px;gap:5px}.qaloon-page-toolbar button{min-height:42px}}
+
+/* UI15 D7 — keep the Qaloon audio player above the Mushaf page. */
+.qaloon-controls-top{max-width:760px;margin:0 auto 10px}
+.qaloon-controls-top .qaloon-panel{margin-top:8px;margin-bottom:10px}
+@media(max-width:520px){.qaloon-controls-top{margin-bottom:6px}.qaloon-controls-top .qaloon-panel{border-radius:14px;padding:10px}}
