@@ -128,57 +128,69 @@
         return data;
     }
 
-    function qaloonVerseMarkup(verse, surahId, activeAyah) {
-        return `<button type="button" class="qaloon-text-ayah ${verse.ayah===+activeAyah?'is-active':''}" id="qaloon-text-${surahId}-${verse.ayah}" data-surah="${surahId}" data-ayah="${verse.ayah}" onclick="selectQaloonAyah(${surahId},${verse.ayah})"><span class="qaloon-ayah-text">${escapeHtml(verse.text)}</span><small>صفحة ${verse.page}</small></button>`;
-    }
-
     function selectQaloonAyah(surahId, ayah) {
         window.ZadQaloon?.save?.({surah:+surahId,ayah:+ayah,rangeStart:+ayah,rangeEnd:+ayah});
         window.ZadQaloon?.stop?.();
-        document.querySelectorAll('.qaloon-text-ayah.is-active').forEach(el=>el.classList.remove('is-active'));
-        document.getElementById(`qaloon-text-${surahId}-${ayah}`)?.classList.add('is-active');
+        window.ZadQaloon?.activate?.(+surahId,+ayah);
         window.ZadQaloon?.attach?.(document.getElementById('qaloon-controls-host'),surahId,ayah);
-        window.ZadQaloon?.regionFor?.(surahId,ayah).then(region=>{if(region){const pos=document.getElementById('qaloon-text-position');if(pos)pos.textContent=`الآية ${ayah} • الصفحة ${region.page}`;window.ZadLibyaPage?.highlightText?.(surahId,ayah);}}).catch(()=>{});
+        window.ZadQaloon?.regionFor?.(surahId,ayah).then(region=>{
+            if(!region)return;
+            const pos=document.getElementById('qaloon-text-position');
+            if(pos)pos.textContent=`الآية ${ayah} • الصفحة ${region.page}`;
+            mountQaloonPage(region.page,+surahId,+ayah);
+        }).catch(()=>{});
+    }
+
+    async function mountQaloonPage(page, surahId, ayah) {
+        const host=document.getElementById('qaloon-page-reader');
+        if(!host)return;
+        await window.ZadLibyaPage?.mountTextPage?.(host,+page,{surah:+surahId,ayah:+ayah});
+        host.dataset.page=String(page);
+        const n=document.getElementById('qaloon-page-number'); if(n)n.textContent=`صفحة ${page} من 602`;
+        document.getElementById('qaloon-prev-page')?.toggleAttribute('disabled',+page<=1);
+        document.getElementById('qaloon-next-page')?.toggleAttribute('disabled',+page>=602);
+    }
+
+    async function changeQaloonPage(delta) {
+        const host=document.getElementById('qaloon-page-reader'); if(!host)return;
+        const page=Math.max(1,Math.min(602,+(host.dataset.page||1)+delta));
+        const ayahs=await window.ZadLibyaPage?.pageAyahs?.(page);
+        if(!ayahs?.length)return;
+        const first=ayahs[0];
+        window.ZadQaloon?.save?.({surah:+first.surah,ayah:+first.ayah,page});
+        await mountQaloonPage(page,+first.surah,+first.ayah);
+        window.ZadQaloon?.activate?.(+first.surah,+first.ayah);
+    }
+
+    function toggleQaloonFullscreen() {
+        const reader=document.getElementById('qaloon-reading-stage'); if(!reader)return;
+        if(document.fullscreenElement){ document.exitFullscreen?.(); return; }
+        if(reader.requestFullscreen){ reader.requestFullscreen().catch(()=>reader.classList.toggle('qaloon-fullscreen-fallback')); }
+        else reader.classList.toggle('qaloon-fullscreen-fallback');
     }
 
     async function openQaloonSurah(surahId, ayahNumber = 1) {
         if (!chapters) return renderQuran();
-        let qaloon;
-        try { qaloon = await loadQaloonText(); } catch (error) { document.getElementById('page-content').innerHTML=errorMarkup(error); return; }
+        try { await loadQaloonText(); } catch (error) { document.getElementById('page-content').innerHTML=errorMarkup(error); return; }
         const chapter = chapters[surahId - 1];
         localStorage.setItem(KEYS.mode, 'qaloon');
         window.ZadQaloon?.save?.({surah:+surahId, ayah:+ayahNumber, rangeStart:+ayahNumber, rangeEnd:+ayahNumber});
         const content = document.getElementById('page-content');
-        content.innerHTML = `<div class="reader-toolbar"><button onclick="renderQuranHome()"><i class="fas fa-arrow-right"></i><span>الفهرس</span></button><div><strong>سورة ${escapeHtml(chapter.name)}</strong><small>مصحف ليبيا • رواية قالون</small></div><span></span></div>
-            <div class="surah-ornament"><span>رواية قالون</span><h2>${escapeHtml(chapter.name)}</h2></div>
-            <div class="qaloon-reader-notice"><i class="fas fa-circle-check"></i><div><strong>نص قالون الليبي</strong><p>هذا النص مستخرج من قاعدة المصحف الليبي المستقلة (6214 آية)، ولا يستخدم ترقيم النص العثماني 6236.</p></div></div>
-            <div class="qaloon-view-switch"><button type="button" id="qaloon-view-text" class="is-active" onclick="setQaloonView('text',${surahId},${ayahNumber})"><i class="fas fa-align-right"></i> نص قالون</button><button type="button" id="qaloon-view-page" onclick="setQaloonView('page',${surahId},${ayahNumber})"><i class="fas fa-book-open"></i> صفحة المصحف</button></div>
-            <div id="qaloon-text-position" class="qaloon-text-position">الآية ${ayahNumber}</div>
-            <div id="qaloon-text-reader" class="qaloon-text-reader" aria-label="نص سورة ${escapeHtml(chapter.name)} برواية قالون">${(qaloon.verses[String(surahId)]||[]).map(v=>qaloonVerseMarkup(v,surahId,ayahNumber)).join('')}</div>
-            <div id="qaloon-page-reader" class="qaloon-page-reader" hidden></div>
+        content.innerHTML = `<div class="reader-toolbar"><button onclick="renderQuranHome()"><i class="fas fa-arrow-right"></i><span>الفهرس</span></button><div><strong>سورة ${escapeHtml(chapter.name)}</strong><small>مصحف ليبيا • رواية قالون</small></div><button onclick="toggleQaloonFullscreen()" aria-label="ملء الشاشة"><i class="fas fa-expand"></i></button></div>
+            <div id="qaloon-reading-stage" class="qaloon-reading-stage">
+              <div class="surah-ornament"><span>رواية قالون</span><h2>${escapeHtml(chapter.name)}</h2></div>
+              <div class="qaloon-page-toolbar"><button id="qaloon-prev-page" onclick="changeQaloonPage(-1)" aria-label="الصفحة السابقة"><i class="fas fa-chevron-right"></i></button><strong id="qaloon-page-number">صفحة</strong><button onclick="toggleQaloonFullscreen()" aria-label="ملء الشاشة"><i class="fas fa-expand"></i></button><button id="qaloon-next-page" onclick="changeQaloonPage(1)" aria-label="الصفحة التالية"><i class="fas fa-chevron-left"></i></button></div>
+              <div id="qaloon-text-position" class="qaloon-text-position">الآية ${ayahNumber}</div>
+              <div id="qaloon-page-reader" class="qaloon-page-reader"></div>
+            </div>
             <div id="qaloon-controls-host"></div>
             <div class="reader-navigation"><button ${surahId<=1?'disabled':''} onclick="openQaloonSurah(${surahId-1},1)"><i class="fas fa-chevron-right"></i> السابقة</button><button onclick="renderQuranHome()"><i class="fas fa-list"></i> الفهرس</button><button ${surahId>=114?'disabled':''} onclick="openQaloonSurah(${surahId+1},1)">التالية <i class="fas fa-chevron-left"></i></button></div>`;
         window.ZadQaloon?.attach?.(document.getElementById('qaloon-controls-host'), surahId, ayahNumber);
-        selectQaloonAyah(surahId, ayahNumber);
-        const preferredView=localStorage.getItem('zad_qaloon_view')==='page'?'page':'text';
-        if(preferredView==='page') setQaloonView('page',surahId,ayahNumber).catch(()=>{});
-        else requestAnimationFrame(()=>document.getElementById(`qaloon-text-${surahId}-${ayahNumber}`)?.scrollIntoView({block:'center'}));
+        const region=await window.ZadQaloon?.regionFor?.(surahId,ayahNumber);
+        if(region) await mountQaloonPage(region.page,+surahId,+ayahNumber);
+        window.ZadQaloon?.activate?.(+surahId,+ayahNumber);
     }
 
-
-    async function setQaloonView(view, surahId, ayah) {
-        localStorage.setItem('zad_qaloon_view', view === 'page' ? 'page' : 'text');
-        const text = document.getElementById('qaloon-text-reader');
-        const pageHost = document.getElementById('qaloon-page-reader');
-        document.getElementById('qaloon-view-text')?.classList.toggle('is-active', view === 'text');
-        document.getElementById('qaloon-view-page')?.classList.toggle('is-active', view === 'page');
-        if (text) text.hidden = view !== 'text';
-        if (pageHost) pageHost.hidden = view !== 'page';
-        if (view !== 'page' || !pageHost) return;
-        const region = await window.ZadQaloon?.regionFor?.(surahId, ayah);
-        if (!region) { pageHost.textContent = 'تعذر تحديد صفحة الآية.'; return; }
-        await window.ZadLibyaPage?.mountTextPage?.(pageHost, region.page, {surah:+surahId, ayah:+ayah});
-    }
 
     function openSurah(surahId, ayahNumber = 1) {
         if (!quranData || !chapters) return renderQuran();
@@ -457,12 +469,19 @@
 
     function filterSurahs(value) { renderQuranHome(value); document.getElementById('surah-search')?.focus(); }
 
+    window.addEventListener('zad:quran-ayah-active', async (e)=>{
+        const host=document.getElementById('qaloon-page-reader');
+        if(!host || !e.detail)return;
+        try{const r=await window.ZadQaloon?.regionFor?.(e.detail.surah,e.detail.ayah);if(r && +host.dataset.page!==+r.page) await mountQaloonPage(r.page,+e.detail.surah,+e.detail.ayah);}catch(_){}
+    });
+
     window.renderQuran = renderQuran;
     window.renderQuranHome = renderQuranHome;
     window.setQuranMode = setQuranMode;
     window.selectQaloonAyah = selectQaloonAyah;
-    window.setQaloonView = setQaloonView;
     window.openQaloonSurah = openQaloonSurah;
+    window.changeQaloonPage = changeQaloonPage;
+    window.toggleQaloonFullscreen = toggleQaloonFullscreen;
     window.openSurah = openSurah;
     window.filterSurahs = filterSurahs;
     window.toggleSurahComplete = toggleSurahComplete;
