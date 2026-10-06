@@ -1,24 +1,15 @@
-# Android Build Report — Qaloon UI15-D4
+# D6 — تقرير Android
 
-## الأوامر
+| الفحص | النتيجة |
+|---|---|
+| npm run android:sync | PASS |
+| نسخ ملفات قالون إلى `www/` | PASS؛ 11 ملف بيانات قالون في المصدر وwww |
+| Capacitor sync | PASS؛ تم تحديث 7 إضافات |
+| Gradle test محليًا | NOT RUN/تعذر؛ Android SDK غير موجود في Sandbox |
+| assembleDebug محليًا | NOT RUN/تعذر؛ Android SDK غير موجود في Sandbox |
+| GitHub Actions APK | PENDING حتى تشغيل workflow على commit النهائي |
+| تثبيت على جهاز حقيقي | NOT RUN |
 
-```bash
-./gradlew test lint assembleDebug --no-daemon
-```
+رسالة الفشل المحلية كانت صريحة: `SDK location not found`. لم تُعتبر هذه المحاولة نجاحًا. سيُعتمد فقط على Artifact ناجح من GitHub Actions بعد دفع commit النهائي.
 
-## النتيجة
-
-- Gradle tests: **PASS**
-- Gradle lint: **PASS**
-- assembleDebug: **PASS**
-- Java: `21.0.12`
-- Gradle: `8.11.1`
-- APK: `android/app/build/outputs/apk/debug/app-debug.apk`
-- الحجم: `27,707,116 bytes`
-- SHA-256: `41eefd39c2a1463024de89706d65cde855ec53e115fa4ef4f709e7436f237749`
-
-## القيود
-
-- هذا APK Debug/Beta وليس Production Final.
-- لم يتم تثبيته على جهاز Android فعلي أو محاكي في هذه البيئة: `REAL DEVICE = NOT RUN`.
-- لا توجد keystore أو أسرار مضافة إلى Git.
+يوجد APK تاريخي من Phase C داخل `deliverables/`، لكنه لا يُسلَّم على أنه APK D6؛ لأن تغييرات D6 الحالية تحتاج Artifact جديدًا.

@@ -2,12 +2,12 @@ const CACHE_NAME = 'zad-al-muslim-v4-9-3-beta-5-2-ui3';
 const AUDIO_CACHE = 'zad-quran-audio-v45';
 const SURAH_AUDIO_CACHE = 'zad-quran-surah-audio-v461';
 const APP_ASSETS = [
-  './', './index.html', './offline.html', './privacy.html', './ui3-enhance.css', './ui3-enhance.js', './styles.css', './home-refresh.css', './ui2-polish.css', './config.js', './supabase-counter.js', './data.js', './app.js', './quran.js', './prayer.js', './enhancements.js', './quran-features.js', './quran-audio.js', './surah-audio.js', './quran-library.js', './audio-downloads.js', './quran-v48.js', './quran-video.js', './app-shell.js', './native-bridge.js', './simplification.js', './home-refresh.js', './quran-libya.js', './quran-libya-page.js', './quran-libya.css',
+  './', './index.html', './offline.html', './privacy.html', './ui3-enhance.css', './ui3-enhance.js', './styles.css', './home-refresh.css', './ui2-polish.css', './config.js', './supabase-counter.js', './data.js', './app.js', './quran.js', './prayer.js', './enhancements.js', './quran-features.js', './quran-audio.js', './surah-audio.js', './quran-library.js', './audio-downloads.js', './quran-v48.js', './quran-video.js', './app-shell.js', './native-bridge.js', './simplification.js', './home-refresh.js',
   './assets/css/fontawesome.min.css', './assets/css/local-fonts.css',
   './assets/webfonts/fa-solid-900.woff2', './assets/webfonts/fa-regular-400.woff2',
   './assets/fonts/amiri.ttf', './assets/fonts/tajawal-300.ttf', './assets/fonts/tajawal-500.ttf', './assets/fonts/tajawal-800.ttf',
   './manifest.webmanifest', './icons/icon.svg', './icons/icon-192.png', './icons/icon-512.png',
-  './quran-libya-data/qaloon-text.json', './quran-libya-data/ayah-regions.json', './quran-libya-data/dokali_qaloon-timings.json', './quran-libya-data/husary_qaloon-timings.json', './quran-libya-data/hudhaifi_qaloon-timings.json', './quran-libya-data/manifest.json', './quran-libya-data/tafsir-muyassar.json', './quran-libya-data/tafsir-saadi.json', './quran-libya-data/quran_asbab_al_nuzool.json', './quran-libya-data/irab.json', './quran-libya-data/mutashabihat.json', './quran-data/chapters.json', './quran-data/uthmani.json', './quran-data/navigation.json', './quran-data/reciters.json', './quran-data/surah-reciters.json', './QURAN_DATA_LICENSE.txt', './THIRD_PARTY_ASSETS.txt'
+  './quran-data/chapters.json', './quran-data/uthmani.json', './quran-data/navigation.json', './quran-data/reciters.json', './quran-data/surah-reciters.json', './QURAN_DATA_LICENSE.txt', './THIRD_PARTY_ASSETS.txt'
 ];
 
 self.addEventListener('install', event => {
